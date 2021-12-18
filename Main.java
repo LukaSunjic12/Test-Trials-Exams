@@ -1,18 +1,18 @@
-package com.company;
-
 public class Main {
-
     public static void main(String[] args) {
-	// write your code here
-        Toy toy = new Toy("Snoopy",45);
-        Toy toy1 = new Toy("Robot",1002);
-        Toy toy2 = new Toy("Rex",75);
+        Dog dog = new Dog("Nero",23);
+        Dog dog1 = new Dog("Ben",47);
+        Dog dog2 = new Dog("Argo",25);
+        Dog dog3 = new Dog("Snoopy",12);
+        dog.Bark();
 
-        Playroom playroom = new Playroom();
-        playroom.addToy(toy);
-        playroom.addToy(toy1);
-        playroom.addToy(toy2);
+        DogHotel hotel = new DogHotel();
+        hotel.addDog(0,dog);
+        hotel.addDog(1,dog1);
+        hotel.addDog(2,dog2);
+        hotel.addDog(3,dog3);
 
-        playroom.average();
+        System.out.println(hotel.lowestWeight());
+
     }
 }
